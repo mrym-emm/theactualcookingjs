@@ -46,3 +46,27 @@ function showCallFunc(fn) {
 showCallFunc(function (number) {
   console.log(number);
 });
+
+function saySomething(msg, callback) {
+  console.log(`${msg}`); // prints the message
+  callback(); // placeholder for the second function
+}
+
+function doneTalking() {
+  console.log("Im done talking!");
+}
+
+saySomething("I think I'll surrender", doneTalking);
+
+//  loops tru the array of number and apply a certain operation on it
+function processArray(numbers, callback) {
+  for (let num of numbers) {
+    console.log(callback(num)); // callback is just a placeholder
+  }
+}
+
+function mult(num) {
+  return num * 2;
+}
+
+processArray([1, 3, 5], mult);
